@@ -45,7 +45,7 @@ $(document).ready(function() {
 
                 $('#cryptoPriceUSD').html(formatCurrency(result.priceUsd, 'USD'))
                 $('#cryptoPricePHP').html(formatCurrency(convertCurrency(result.priceUsd), 'PHP'))
-                $('#24hChange').html(Math.round(result.changePercent24Hr * 100) + '%')
+                $('#24hChange').html(parseFloat(result.changePercent24Hr).toFixed(2) + '%')
 
                 $('#24hVolume').html(formatCurrency(result.volumeUsd24Hr, 'USD'))
                 $('#cryptoSupply').html(formatCurrency(result.supply, 'USD'))
